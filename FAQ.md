@@ -6,24 +6,15 @@ AVELINE - это полнофункциональный интернет-маг�
 
 Как запустить проект на своем компьютере?
 
-# 1. Клонируйте репозиторий
-git clone https://github.com/Sofia-claire/aveline.git
-cd aveline
-
-# 2. Создайте виртуальное окружение
-python -m venv venv
-
-# 3. Активируйте окружение
-# Windows: venv\Scripts\activate
-# Mac/Linux: source venv/bin/activate
-
-# 4. Установите зависимости
-pip install -r requirements.txt
-
-# 5. Запустите приложение
-python app.py
-
-# 6. Откройте в браузере: http://localhost:5000
+* git clone https://github.com/Sofia-claire/aveline.git 
+* cd aveline
+* python -m venv venv
+* python -m venv venv
+* venv\Scripts\activate
+* pip install -r requirements.txt
+* cd aveline
+* python app.py
+* откройте в браузере: http://localhost:5000
 
 
 Какие технологии используются?
