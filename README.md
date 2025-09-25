@@ -73,7 +73,6 @@ aveline/
 ├── app.py                 # Основное приложение Flask
 ├── database.db            # База данных SQLite (создается автоматически)
 ├── proba.py               # проба
-├── README.md              # вы тут
 │
 ├── static/               # Статические файлы
 │   ├── banner1.jpg       #1 баннер
@@ -194,4 +193,5 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
