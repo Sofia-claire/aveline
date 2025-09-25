@@ -168,6 +168,12 @@ python app.py
 
 ---
 
+##  Документация
+
+*   [Часто задаваемые вопросы (FAQ)](https://github.com/Sofia-claire/aveline/FAQ.md)
+
+---
+
 Лицензия
 
 Распространяется под лицензией MIT. См. файл LICENSE для деталей.
@@ -180,6 +186,7 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
 
 
