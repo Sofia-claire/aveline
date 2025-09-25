@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Список брендов</h1>
+
+<div class="brands-container">
+    <div class="brand-banner">
+        <a href="{{ url_for('brands_collection1') }}">
+            <img src="{{ url_for('static', filename='banner1.jpg') }}" alt="Коллекция 1">
+            <div class="banner-text">Collection 1</div>
+        </a>
+    </div>
+
+    <div class="brand-banner">
+        <a href="{{ url_for('brands_collection2') }}">
+            <img src="{{ url_for('static', filename='banner2.jpg') }}" alt="Коллекция 2">
+            <div class="banner-text">Collection 2</div>
+        </a>
+    </div>
+</div>
+{% endblock %}

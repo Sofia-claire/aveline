@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="checkout-container">
+    <h1>Оформление заказа</h1>
+
+    {% if products %}
+        <div class="checkout-list">
+            {% for p in products %}
+                <div class="checkout-item">
+                    <img src="{{ url_for('static', filename=p[4] if p[4] else 'product1.jpg') }}" alt="{{ p[1] }}">
+                    <div class="item-info">
+                        <h2>{{ p[1] }}</h2>
+                        <p class="price">{{ p[3] }} ₽</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <form method="post" action="{{ url_for('checkout') }}" class="checkout-form">
+            <label>Ваше имя:</label>
+            <input type="text" name="name" required>
+
+            <label>Телефон:</label>
+            <input type="text" name="phone" required>
+
+            <label>Адрес доставки:</label>
+            <input type="text" name="address" required>
+
+            <button type="submit" class="checkout-btn">Подтвердить заказ</button>
+        </form>
+    {% else %}
+        <p class="empty">В корзине пусто</p>
+    {% endif %}
+</div>
+{% endblock %}

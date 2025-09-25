@@ -1,0 +1,187 @@
+/*@import url('https://fonts.googleapis.com/css?family=Lato:400,700');*/
+
+/* Центровка контейнера */
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  background: url("/static/background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 520px;
+  height: 350px;
+  background: #F5F5F5; /* white */
+  box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5); /* rose */
+  border-radius: 10px;
+}
+
+p {
+  font-size: 0.6em;
+  color: #BA7E7E; /* rose */
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #4E4E4E; /* dark */
+  margin-top: -5px;
+}
+
+h2 {
+  color: #C3A1A0; /* tan */
+  margin-top: -5px;
+}
+
+img {
+  width: 290px;
+  margin-top: 47px;
+}
+
+/* Слайды (точки переключения) */
+.slideshow-buttons {
+  top: 70%;
+  display: none;
+}
+
+.one, .two, .three, .four {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #E0C9CB; /* light */
+}
+
+.one { left: 22%; }
+.two { left: 27%; }
+.three { left: 32%; }
+.four { left: 37%; }
+
+.product {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 10%;
+  left: 60%;
+}
+
+.desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: #4E4E4E;
+  font-size: .7em;
+  line-height: 1.6em;
+  margin-right: 25px;
+  text-align: justify;
+}
+
+/* Кнопки */
+button {
+  background: #8aa194; /* darkened light */
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ddd6d6;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8aa194; /* rose */
+  transition: all .4s ease-in-out;
+}
+
+.add { width: 67%; }
+.like { width: 22%; }
+
+/* Размеры */
+.sizes {
+  display: grid;
+  color: #D9AAB7; /* pink */
+  grid-template-columns: repeat(auto-fill, 30px);
+  width: 60%;
+  grid-gap: 4px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.sizes:hover { cursor: pointer; }
+
+.pick {
+  margin-top: 11px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.size {
+  padding: 9px;
+  border: 1px solid #8aa194;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.size:hover {
+  background: #8aa194;
+  color: #F5F5F5;
+  transition: all .4s ease-in-out;
+}
+
+.focus {
+  background: #8aa194;
+  color: #F5F5F5;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+footer p {
+  letter-spacing: 3px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #35463e;
+
+}
+button.remove {
+  background: #535e58;
+; /* серый */
+}
+
+button.remove:hover {
+  background: #343836;
+}
+
+button.remove-like {
+  background: #000000; /* тёмно-серый */
+}
+
+button.remove-like:hover {
+  background: #3f2c2c;
+}

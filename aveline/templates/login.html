@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="login-container">
+    <div class="form-container">
+        <!-- Переключатель между вкладками -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="login">Вход</button>
+            <button class="tab-btn" data-tab="register">Регистрация</button>
+        </div>
+
+        <!-- Форма Входа -->
+        <form id="login-form" class="form active">
+            <h2>Добро пожаловать</h2>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Введите email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <a href="#" class="forgot-password">Забыли пароль?</a>
+            <button type="submit" class="submit-btn">Войти</button>
+        </form>
+
+        <!-- Форма Регистрации -->
+        <form id="register-form" class="form">
+            <h2>Создать аккаунт</h2>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" placeholder="Введите имя" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Введите email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="confirm_password" placeholder="Введите пароль ещё раз" required>
+            </div>
+            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        </form>
+    </div>
+</div>
+
+<!-- Индикатор успешного входа -->
+<div id="login-success" class="success-message">
+    <div class="success-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Вход выполнен успешно!</h3>
+        <p>Добро пожаловать!</p>
+        <a href="/menu" class="success-btn">Перейти в меню</a>
+    </div>
+</div>
+
+<script>
+// JavaScript для переключения вкладок и обработки форм
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const forms = document.querySelectorAll('.form');
+
+    // Функция для переключения вкладок
+    function switchTab(tabName) {
+        // Скрываем все формы
+        forms.forEach(form => {
+            form.style.display = 'none';
+            form.classList.remove('active');
+        });
+        
+        // Показываем нужную форму
+        const activeForm = document.getElementById(${tabName}-form);
+        if (activeForm) {
+            activeForm.style.display = 'block';
+            activeForm.classList.add('active');
+        }
+        
+        // Обновляем активную кнопку
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-tab') === tabName) {
+                btn.classList.add('active');
+            }
+        });
+    }
+
+    // Обработчики для кнопок вкладок
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
+            switchTab(targetTab);
+        });
+    });
+
+    // Обработчики для форм (предотвращаем отправку на сервер)
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Показываем сообщение об успехе
+            document.getElementById('login-success').style.display = 'flex';
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Показываем сообщение об успехе
+            document.getElementById('login-success').style.display = 'flex';
+        });
+    }
+
+    // Закрытие сообщения об успехе при клике на фон
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('success-message')) {
+            e.target.style.display = 'none';
+        }
+    });
+
+    // Убедимся, что форма входа видна при загрузке
+    switchTab('login');
+});
+</script>
+{% endblock %}

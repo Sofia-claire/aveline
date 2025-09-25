@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Избранные</h1>
+
+{% if products %}
+    <div class="product-list">
+        {% for p in products %}
+            <div class="product-card">
+                <img src="{{ url_for('static', filename=p[4] if p[4] else 'product1.jpg') }}" alt="{{ p[1] }}">
+                <h2>{{ p[1] }}</h2>
+                <p class="price">{{ p[3] }} ₽</p>
+
+                <!-- Удалить из избранного -->
+                <button onclick="location.href='{{ url_for('remove_from_favorites', product_id=p[0]) }}'">
+                    Убрать ⨳
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Пока нет избранных товаров</p>
+{% endif %}
+{% endblock %}

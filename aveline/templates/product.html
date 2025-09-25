@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+
+<div class="container">
+    <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+
+    <div class="product">
+        <h1>{{ product.name }}</h1>
+        <h2>{{ product.price }} ₽</h2>
+        <p class="desc">{{ product.description }}</p>
+
+        <!-- Добавить в корзину -->
+        <button class="add" onclick="location.href='{{ url_for('add_to_cart', product_id=product.id) }}'">
+            В корзину
+        </button>
+
+        <!-- Удалить из корзины -->
+        <button class="remove" onclick="location.href='{{ url_for('remove_from_cart', product_id=product.id) }}'">
+            Убрать из корзины
+        </button>
+
+        <!-- Добавить в избранное -->
+        <button class="like" onclick="location.href='{{ url_for('add_to_favorites', product_id=product.id) }}'">
+            🖤
+        </button>
+
+        <!-- Удалить из избранного -->
+        <button class="remove-like" onclick="location.href='{{ url_for('remove_from_favorites', product_id=product.id) }}'">
+            ⨳
+        </button>
+    </div>
+</div>
+{% endblock %}

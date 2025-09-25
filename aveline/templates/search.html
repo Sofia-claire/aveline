@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <h1>Поиск товаров</h1>
+    <form method="get" action="{{ url_for('search') }}" class="search-form">
+        <input type="text" name="q" placeholder="Введите название товара..." value="{{ request.args.get('q', '') }}">
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if products %}
+        <div class="product-list center">
+            {% for p in products %}
+                <div class="product-card">
+                    <a href="{{ url_for('product_page', product_id=p[0]) }}">
+                        <img src="{{ url_for('static', filename=p[4] if p[4] else 'product1.jpg') }}" alt="{{ p[1] }}">
+                        <h2>{{ p[1] }}</h2>
+                        <p class="price">{{ p[3] }} ₽</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% elif request.args.get('q') %}
+        <p class="no-results">Товары не найдены.</p>
+    {% endif %}
+</div>
+{% endblock %}

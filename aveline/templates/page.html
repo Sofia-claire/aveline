@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ page_label }}</h1>
+
+  {% if text %}
+    <p>{{ text }}</p>
+  {% endif %}
+
+  {% if links %}
+    <ul>
+      {% for link in links %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

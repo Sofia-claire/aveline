@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="menu-page">
+    <h1>{{ page_label }}</h1>
+    
+    <div class="menu-grid">
+        {% for link in links %}
+        <a href="{{ link.url }}" 
+           class="menu-item"
+           {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <div class="menu-icon">
+                <img src="{{ url_for('static', filename='icons/' + link.icon) }}" alt="{{ link.label }}">
+            </div>
+            <span class="menu-label">{{ link.label }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

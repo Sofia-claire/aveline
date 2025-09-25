@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Подключение иконок Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Верхняя чёрная панель -->
+<header class="topbar">
+    <div class="left-group">
+        <a class="icon-link" href="/menu" title="Меню"><i class="fa-solid fa-bars"></i></a>
+        <a class="icon-link" href="/favorites" title="Избранное"><i class="fa-regular fa-heart"></i></a>
+    </div>
+
+    <div class="center-group">
+        <a class="logo" href="/">AVELINE</a>
+    </div>
+
+    <div class="right-group">
+        <a class="icon-link" href="/search" title="Поиск"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a class="icon-link" href="/cart" title="Корзина"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+</header>
+
+    <!-- Баннер (будет только на нужных страницах) -->
+    {% block banner %}{% endblock %}
+
+    <!-- Контент страницы -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
