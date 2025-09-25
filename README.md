@@ -55,46 +55,46 @@ AVELINE - Интернет-магазин одежды
  Структура проекта
 
 aveline/
-├── app.py                 # Основное приложение Flask
-├── database.db            # База данных SQLite (создается автоматически)
-├── proba.py               # проба
-│
-├── static/               # Статические файлы
-│   ├── banner1.jpg       #1 баннер
-│   ├── banner2.jpg       #2 баннер
-│   ├── background.png    #2 изображение для фона на всем сайте
-│   ├── icons
-│   │   └──brands-icon.png      # иконка брэнда
-│   │   └──favorites-icon.png   # иконка избранного
-│   │   └──history-icon.png     # иконка истории
-│   │   └──instagram-icon.png   # иконка инсты
-│   │   └──login-icon.png       # иконка логин
-│   │   └──reviews-icon.png     # иконка оотзывов
-│   │   └──telegram-icon.png    # иконка тг
-│   └── product1.jpg            # фотокарточка 1 продукта
-│   └── product2.jpg            # фотокарточка 2 продукта
-│   └── product3.jpg            # фотокарточка 3 продукта
-│   └── product4.jpg            # фотокарточка 4 продукта
-│   └── product.css             # ксс файл для подробного стиля продукта
-│   └── style.css               # базовый ксс файл для стиля всех страничек
-│
-└── templates/                  # HTML шаблоны
-    ├── about.html              # Страница "О нас"
-    ├── base.html               # Главная страница
-    ├── brands_collection.html  # Корзина
-    ├── brands.html             # Избранное
-    ├── cart.html               # Корзина
-    ├── checkout.html           # Страница "О нас"
-    ├── favorites.html          # Избранное
-    ├── index.html              # Главная страница
-    ├── login.html              # вход/регистрация
-    ├── menu.html               # Меню
-    ├── order_success.html      # Заказ
-    ├── page.html               # Коллекции брендов
-    ├── proba.html              # пробный бд
-    ├── produc.html             # карточка товара
-    ├── search.html             # поиск
-    └── shop.html               # страничка магазина товаров
+· ├── app.py                 # Основное приложение Flask
+· ├── database.db            # База данных SQLite (создается автоматически)
+· ├── proba.py               # проба
+· │
+· ├── static/               # Статические файлы
+· │   ├── banner1.jpg       #1 баннер
+· │   ├── banner2.jpg       #2 баннер
+· │   ├── background.png    #2 изображение для фона на всем сайте
+· │   ├── icons
+· │   │   └──brands-icon.png      # иконка брэнда
+· │   │   └──favorites-icon.png   # иконка избранного
+· │   │   └──history-icon.png     # иконка истории
+· │   │   └──instagram-icon.png   # иконка инсты
+· │   │   └──login-icon.png       # иконка логин
+· │   │   └──reviews-icon.png     # иконка оотзывов
+· │   │   └──telegram-icon.png    # иконка тг
+· │   └── product1.jpg            # фотокарточка 1 продукта
+· │   └── product2.jpg            # фотокарточка 2 продукта
+· │   └── product3.jpg            # фотокарточка 3 продукта
+· │   └── product4.jpg            # фотокарточка 4 продукта
+· │   └── product.css             # ксс файл для подробного стиля продукта
+· │   └── style.css               # базовый ксс файл для стиля всех страничек
+· │
+· └── templates/                  # HTML шаблоны
+·     ├── about.html              # Страница "О нас"
+·     ├── base.html               # Главная страница
+·     ├── brands_collection.html  # Корзина
+·     ├── brands.html             # Избранное
+·     ├── cart.html               # Корзина
+·     ├── checkout.html           # Страница "О нас"
+·     ├── favorites.html          # Избранное
+·     ├── index.html              # Главная страница
+·     ├── login.html              # вход/регистрация
+·     ├── menu.html               # Меню
+·     ├── order_success.html      # Заказ
+·     ├── page.html               # Коллекции брендов
+·     ├── proba.html              # пробный бд
+·     ├── produc.html             # карточка товара
+·     ├── search.html             # поиск
+·     └── shop.html               # страничка магазина товаров
 
  
 ---
@@ -178,6 +178,7 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
 
 
