@@ -1,5 +1,3 @@
-Отлично! Теперь я могу создать идеальный README.md именно для вашего проекта. Изучив структуру вашего репозитория, вот адаптированная версия:
-
 AVELINE - Интернет-магазин одежды
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
@@ -186,6 +184,7 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
 
 
