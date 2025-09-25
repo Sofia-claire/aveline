@@ -55,11 +55,11 @@ AVELINE - Интернет-магазин одежды
  Структура проекта
 
 aveline/
-· ├── app.py                 # Основное приложение Flask
-· ├── database.db            # База данных SQLite (создается автоматически)
-· ├── proba.py               # проба
-· │
-· ├── static/               # Статические файлы
+* ├── app.py                 # Основное приложение Flask
+*  ├── database.db            # База данных SQLite (создается автоматически)
+*  ├── proba.py               # проба
+*  │
+*  ├── static/               # Статические файлы
 · │   ├── banner1.jpg       #1 баннер
 · │   ├── banner2.jpg       #2 баннер
 · │   ├── background.png    #2 изображение для фона на всем сайте
@@ -178,6 +178,7 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
 
 
