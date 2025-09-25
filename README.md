@@ -19,14 +19,14 @@ AVELINE - Интернет-магазин одежды
 
 ### Установка и запуск
 
-git clone https://github.com/Sofia-claire/aveline.git 
-cd aveline
-python -m venv venv
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-cd aveline
-python app.py
+* git clone https://github.com/Sofia-claire/aveline.git 
+* cd aveline
+* python -m venv venv
+* python -m venv venv
+* venv\Scripts\activate
+* pip install -r requirements.txt
+* cd aveline
+* python app.py
 
 
 Приложение будет доступно по ссылке: http://localhost:5000/
@@ -178,6 +178,7 @@ Sofia-claire на гитхабе
 почта - sofiaulivanova@gmail.com 
 
 Ссылка на проект: https://github.com/Sofia-claire/aveline
+
 
 
 
